@@ -4,6 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import com.example.springboot.Contact;
+
+Press Shift + Tab to navigate to chat history.
 
 @Controller
 public class HelloController {
@@ -21,6 +26,11 @@ public class HelloController {
     @GetMapping("/contact")
 	public String contact( Model model) {
 		return "contact";
+    }
+    @GetMapping("/contact")
+    public String postContact(Model,model,@RequestBody Contact contact){
+        System.out.printIn(contact.getEmail());
+        return "contact"
     }
     @GetMapping("/about")
 	public String about( Model model) {
