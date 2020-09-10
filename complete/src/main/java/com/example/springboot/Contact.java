@@ -1,4 +1,5 @@
 package com.example.springboot;
+
 public class Contact {
     private String email;
     private String message;
@@ -8,14 +9,14 @@ public class Contact {
     }
 
     public void setEmail(String newEmail){
-        this.email=newEmail;
+        this.email = newEmail;
     }
 
-    public String getmessage(){
+    public String getMessage(){
         return message;
     }
 
     public void setMessage(String newMessage){
-        this.message=newMessage;
+        this.message = newMessage;
     }
 }
