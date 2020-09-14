@@ -35,4 +35,16 @@ public class HelloController {
         return "about";
     }
 
+     @GetMapping("/blog")
+    public String blog(Model model){
+        return "blog";
+    }
+
+    @PostMapping("/blog")
+    public String postBlog(Model model, @RequestBody Contact contact){
+        //Blog create object
+        System.out.println(blog.getMessage());
+        return "blog";
+    }
+
 }
