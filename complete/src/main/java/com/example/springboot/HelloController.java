@@ -41,7 +41,7 @@ public class HelloController {
     }
 
     @PostMapping("/blog")
-    public String postBlog(Model model, @RequestBody Contact contact){
+    public String postBlog(Model model, @RequestBody Blog blog){
         //Blog create object
         System.out.println(blog.getMessage());
         return "blog";
