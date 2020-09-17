@@ -44,6 +44,8 @@
     </div>
     <button type="submit" class="btn btn-primary btn-lg" >Submit</button>
 </form> 
+<div id = "blogAddition">
+</div>
 </div> 
 
     <!-- Optional JavaScript -->
@@ -67,9 +69,17 @@
                 data: JSON.stringify(formData),
                 contentType: "application/json; charset=utf-8",
                 success: function(data){
-                    console.log(data);
+                   $('#blogAddition').html(data);
+                    var addItem = $('#blogAddiction').html(data);   
+                    $('#blogAddiction').append(`<li class="list-group-item">${addItem}</li>`);
+                    return false;
+                },
+                error: function(e){
+                    console.log(e);
+                    $('#blogAddition').html('<span>Sorry we couldnt complete your request</span>');
                 }
             });
+                
         });
     </script>  
   </body>
