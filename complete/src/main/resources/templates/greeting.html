@@ -55,17 +55,17 @@
 $( document ).ready(function() {
     console.log( "ready!" );
     $.ajax({
-                type: 'GET',
-                url: 'https://api.nasa.gov/planetary/apod?api_key=biAByDf8RSNcDIm12b86KrZtfEZEcVXsWT0O7fVd',
-                dataType:'json',
-               success: function(data){
-                    $('#nasaAPOD').css('background',"url('"+datat.url+"')";
-                },
-                error: function(e){
-                    console.log(e);
-                    $('#ajaxResponse').html('<span>Sorry we couldnt complete your request</span>');
-                }
-            });
+        type: 'GET',
+        url: 'https://api.nasa.gov/planetary/apod?api_key=biAByDf8RSNcDIm12b86KrZtfEZEcVXsWT0O7fVd',
+        dataType:'json',
+        success: function(data){
+            console.log(data)
+             $('#nasaAPOD').css('background',"url('"+data.url+"')";
+        },
+        error: function(e){
+            console.log(e);
+            }
+        });
 });
      </script>
   </body>
