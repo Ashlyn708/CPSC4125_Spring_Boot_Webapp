@@ -45,12 +45,7 @@
     <button type="submit" class="btn btn-primary btn-lg" >Submit</button>
 </form> 
 <div id = "blogAddition">
-<ul class="blogPost">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
+<ul id ="blogPost" class ="list-group">
 </ul>
 </div>
 </div> 
@@ -77,8 +72,9 @@
                 contentType: "application/json; charset=utf-8",
                 success: function(data){
                    $('#blogAddition').html(data);
-                    var addItem = $('#blogAddiction').html(data);   
-                    $('#blogAddiction').append(`<li class="list-group-item">${addItem}</li>`);
+                    var addItem = $('#exampleFormControlTextarea1').val();   
+                    $('#blogPost').append(`<li class="list-group-item">${addItem}</li>`);
+                    $("input:text").val("");
                     return false;
                 },
                 error: function(e){

@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet">
     <title>Hello, world!</title>
   </head>
   <body>
@@ -40,7 +40,7 @@
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
-<div id-"nasaAPOD">  
+<div id="nasaAPOD">  
 </div>
 
 
@@ -57,16 +57,16 @@ $( document ).ready(function() {
     $.ajax({
         type: 'GET',
         url: 'https://api.nasa.gov/planetary/apod?api_key=biAByDf8RSNcDIm12b86KrZtfEZEcVXsWT0O7fVd',
-        dataType:'json',
-        success: function(data){
-            console.log(data)
-             $('#nasaAPOD').css('background',"url('"+data.url+"')";
-        },
-        error: function(e){
-            console.log(e);
-            }
+            dataType: 'json',
+            success: function(data){
+                console.log(data);
+                $('#nasaAPOD').css('background',"url('" + data.url + "')");
+            },
+            error: function(e){
+                console.log(e);
+                }
+            });
         });
-});
      </script>
   </body>
 </html>
