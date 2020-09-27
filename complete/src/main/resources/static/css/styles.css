@@ -1,5 +1,5 @@
 body{
-    color:blue;
+ color:blue;
 }
 #about-me{
     background-image: url(/img/aboutus.jpg);
@@ -12,5 +12,7 @@ body{
     font-size: 1.5em;
 }
 #nasaAPOD{
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    height:50vw;
+    background-position: center;
 }
