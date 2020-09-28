@@ -1,18 +1,33 @@
 body{
- color:blue;
+ background-color: #c3ccce;
+ background-blend-mode: lighten;
+ font-size: medium;
+ border:#c89666;
+ border-width: thin;
+}
+#about-me-pic{
+    background-image: url(/img/aboutus.jpg);
+    background-repeat: no-repeat;
+    background-color: #e1b382;
+    background-size:contain;
+    height:25vw;
 }
 #about-me{
-    background-image: url(/img/aboutus.jpg);
-    background-size: 50% 50%;
-    background-repeat: no-repeat;
-    font-size: 3em;
     background-position: top left;
 }
 .lead{
-    font-size: 1.5em;
+    font-size: x-large;
 }
 #nasaAPOD{
     background-repeat: repeat;
     height:50vw;
     background-position: center;
+}
+
+#allPost{
+    border:#12343b;
+}
+
+.jumbotron{
+    background-color:#e1b382;
 }
